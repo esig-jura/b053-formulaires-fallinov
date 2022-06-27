@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaires</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<h1>Mes tâches</h1>
+<form action="https://kode.ch/getpost/" method="post" enctype="multipart/form-data">
+    <ul>
+        <li class="demi">
+            <label for="tache">Nom de la tâche</label>
+            <input id="tache" name="tache" type="text" autofocus>
+        </li><li class="demi fin">
+            <button>Ajouter</button>
+        </li>
+    </ul>
+</form>
+
+<ul class="taches">
+    <li>Acheter du pain</li>
+    <li>Laver la voiture</li>
+</ul>
+<!-- JavaScript -->
+<script>
+   /* Création des variables */
+   let btAjouter = document.querySelector('button')
+   let txtTache = document.querySelector('#tache')
+   let ulTaches = document.querySelector('.taches')
+
+   btAjouter.addEventListener('click', function (event){
+       // Annule l'envoi du formulaire
+       event.preventDefault();
+
+       // Tester si chaine vide
+       if(txtTache.value === '') {
+           alert("Entrez une tâche !")
+           // Redonne le focus à l'input #tache
+           txtTache.focus()
+           // Stoppe la fonction
+           return
+       }
+
+       // Ajoute le texte de l'input #tache à la fin de la liste <ul>
+       ulTaches.innerHTML += '<li>' + txtTache.value + '</li>'
+       // Vider l'input #tache
+       txtTache.value = ''
+       // Redonne le focus à l'input #tache
+       txtTache.focus()
+   })
+
+   ulTaches.addEventListener('dblclick', function (event){
+        let cible = event.target
+        if (cible.nodeName === 'LI') {
+            cible.remove()
+        }
+   })
+</script>
+</body>
+</html>
