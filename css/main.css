@@ -16,7 +16,8 @@ h1 {
 
 /* Récupère la police,la taille et couleur du texte du parent (inherit) */
 input,
-button {
+button,
+textarea {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
@@ -39,7 +40,7 @@ button:hover {
 form {
     background-color: #ecf0f1;
     padding: 20px 2.5%;
-    max-width: 450px;
+    max-width: 650px;
     margin: 20px auto;
 }
 
@@ -49,7 +50,7 @@ form ul {
 }
 
 form ul li {
-    margin-bottom: 1em;
+    margin-bottom: 1.75em;
 }
 
 form ul li.demi {
@@ -63,8 +64,9 @@ form ul li.demi + li.demi {
 
 form label {
     display: block;
-    margin-bottom: .2em;
+    margin-bottom: .15em;
     cursor: pointer;
+    font-weight: bold;
 }
 
 form label span {
@@ -73,11 +75,28 @@ form label span {
     vertical-align: super;
 }
 
-form input {
+form input,
+form textarea {
     padding: .6em;
     width: 100%;
 }
 
+form textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 5em;
+    resize: vertical;
+}
+
+form [type="checkbox"],
+form [type="radio"] {
+    width: auto;
+}
+
+form [type="checkbox"] + label,
+form [type="radio"] + label {
+    display: inline-block;
+}
 /* Pour écrans de moins de 400px */
 @media screen and (max-width: 400px) {
    body {

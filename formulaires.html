@@ -30,7 +30,20 @@
             </li>
             <li>
                 <label for="message">Votre message</label>
-                <input id="message" name="message" type="text">
+                <textarea id="message" name="message"></textarea>
+            </li>
+            <li>
+                <input id="copie" name="copie" type="checkbox">
+                <label for="copie">Je veux recevoir une copie du message</label>
+            </li>
+            <li>
+                <fieldset>
+                    <legend>Sélectionnez votre pays d'origine</legend>
+                    <div>
+                        <input id="france" name="pays-origine" type="radio">
+                        <label for="france">France</label>
+                    </div>
+                </fieldset>
             </li>
             <li>
                 <button>Envoyer</button>
