@@ -88,6 +88,10 @@ form textarea {
     resize: vertical;
 }
 
+form legend {
+    font-weight: bold;
+}
+
 form [type="checkbox"],
 form [type="radio"] {
     width: auto;
@@ -96,6 +100,8 @@ form [type="radio"] {
 form [type="checkbox"] + label,
 form [type="radio"] + label {
     display: inline-block;
+    font-weight: normal;
+    padding: .25em 0;
 }
 /* Pour écrans de moins de 400px */
 @media screen and (max-width: 400px) {
