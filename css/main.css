@@ -9,6 +9,11 @@ html {
     background-color: white;
     color: #2c3e50;
 }
+
+h1 {
+    text-align: center;
+}
+
 /* Récupère la police,la taille et couleur du texte du parent (inherit) */
 input,
 button {
@@ -33,7 +38,7 @@ button:hover {
 
 form {
     background-color: #ecf0f1;
-    padding: 20px;
+    padding: 20px 2.5%;
     max-width: 450px;
     margin: 20px auto;
 }
@@ -51,4 +56,17 @@ form label {
     display: block;
     margin-bottom: .2em;
     cursor: pointer;
+}
+
+form input {
+    padding: .6em;
+    width: 100%;
+}
+
+/* Pour écrans de moins de 400px */
+@media screen and (max-width: 400px) {
+   body {
+       padding: 0;
+       margin: 0;
+   }
 }
