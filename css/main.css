@@ -17,7 +17,8 @@ h1 {
 /* Récupère la police,la taille et couleur du texte du parent (inherit) */
 input,
 button,
-textarea {
+textarea,
+select {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
@@ -76,7 +77,8 @@ form label span {
 }
 
 form input,
-form textarea {
+form textarea,
+form select {
     padding: .6em;
     width: 100%;
 }
@@ -103,6 +105,15 @@ form [type="radio"] + label {
     font-weight: normal;
     padding: .25em 0;
 }
+
+#autre + label + input {
+    display: none;
+}
+
+#autre:checked + label + input {
+    display: block;
+}
+
 /* Pour écrans de moins de 400px */
 @media screen and (max-width: 400px) {
    body {

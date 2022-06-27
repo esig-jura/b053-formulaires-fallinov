@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Formulaire d'inscription</h1>
-    <form action="https://kode.ch/getpost/" method="post">
+    <form action="https://kode.ch/getpost/" method="post" enctype="multipart/form-data">
         <ul>
             <li class="demi">
                 <label for="prenom">Prénom <span>(obligatoire)</span></label>
@@ -51,6 +51,11 @@
                         <input id="suisse" name="pays-origine" type="radio" value="ch">
                         <label for="suisse">Suisse</label>
                     </div>
+                    <div>
+                        <input id="autre" name="pays-origine" type="radio" value="ch">
+                        <label for="autre">Autre</label>
+                        <input name="pays-origine-autre" type="text" placeholder="Nom de votre pays">
+                    </div>
                 </fieldset>
             </li>
             <li>
@@ -68,6 +73,27 @@
                         <option value="us">USA</option>
                     </optgroup>
                 </select>
+            </li>
+            <li>
+                <fieldset>
+                    <legend>Sélectionnez vos genres musicaux favoris</legend>
+                    <div>
+                        <input id="pop" name="music[]" type="checkbox" value="pop">
+                        <label for="pop">Pop</label>
+                    </div>
+                    <div>
+                        <input id="rock" name="music[]" type="checkbox" value="rock">
+                        <label for="rock">Rock</label>
+                    </div>
+                    <div>
+                        <input id="punk" name="music[]" type="checkbox" value="punk">
+                        <label for="punk">Punk</label>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
+                <label for="cv">Téléversez votre CV</label>
+                <input id="cv" name="cv" type="file" accept="application/pdf">
             </li>
             <li>
                 <button>Envoyer</button>
