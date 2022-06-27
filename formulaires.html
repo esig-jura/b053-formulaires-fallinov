@@ -10,13 +10,27 @@
     <h1>Formulaire d'inscription</h1>
     <form action="https://kode.ch/getpost/" method="post">
         <ul>
-            <li>
-                <label for="prenom">Prénom</label>
-                <input id="prenom" name="prenom" type="text">
-            </li>
-            <li>
+            <li class="demi">
+                <label for="prenom">Prénom <span>(obligatoire)</span></label>
+                <input id="prenom" name="prenom" type="text" autofocus required>
+            </li><li class="demi">
                 <label for="nom">Nom de famille</label>
                 <input id="nom" name="nom" type="text">
+            </li>
+            <li>
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="nom.prenom@jura.ch">
+            </li>
+            <li class="demi">
+                <label for="mdp">Mot de passe</label>
+                <input id="mdp" name="mdp" type="password" placeholder="Minimum 6 caractères">
+            </li><li class="demi">
+                <label for="confirmer">Confirmer</label>
+                <input id="confirmer" name="confirmer" type="password" placeholder="Confirmer mot de passse">
+            </li>
+            <li>
+                <label for="message">Votre message</label>
+                <input id="message" name="message" type="text">
             </li>
             <li>
                 <button>Envoyer</button>

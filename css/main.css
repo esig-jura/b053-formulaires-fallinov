@@ -52,10 +52,25 @@ form ul li {
     margin-bottom: 1em;
 }
 
+form ul li.demi {
+    display: inline-block;
+    width: 49%;
+}
+
+form ul li.demi + li.demi {
+    margin-left: 2%;
+}
+
 form label {
     display: block;
     margin-bottom: .2em;
     cursor: pointer;
+}
+
+form label span {
+    font-size: .75em;
+    color: #e67e22;
+    vertical-align: super;
 }
 
 form input {
